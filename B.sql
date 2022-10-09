@@ -13,9 +13,7 @@ GO
 
 CREATE TABLE Staff(
 StaffID CHAR(6) PRIMARY KEY CHECK (StaffID LIKE 'STF[0-9][0-9][0-9]'),
-StaffName VARCHAR(50) CHECK (DATALENGTH (StaffName) >= 3) NOT NULL, --ini syntax udah benar atau belum? sesuai ga sama yg di soal?
-                                                                    --tapi kan yg di soal diminta ">= 3 CHARACTER (a,b,c).
-																	--sedangkan ini ketika kita masukkin "Lii" dia tetap sukses ke execute.
+StaffName VARCHAR(50) CHECK (DATALENGTH (StaffName) >= 3) NOT NULL, 
 StaffGender VARCHAR(6) CHECK (StaffGender = 'Male' OR StaffGender = 'Female') NOT NULL,
 StaffDoB DATE NOT NULL,
 StaffPhone VARCHAR(12) NOT NULL,
